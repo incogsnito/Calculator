@@ -10,15 +10,20 @@ input.addEventListener("click", (e) => {
     if (inputValue === "delete") {
       output.value = output.value.slice(0, -1);
       return;
-    } else if (inputValue === "="){
-      output.value = Function('return ' + output.value)();
-      return;
-    } else if (inputValue === "Ac"){
+    } else if (inputValue === "=") {
+      output.value = Function("return " + output.value)();
+
+      if (output.value === "Infinity") {
+        output.value = "";
+        alert("Can't divide by zero");
+        return;
+
+      }
+    } 
+    else if (inputValue === "Ac") {
       output.value = "";
       return;
     }
-
-
 
     output.value += inputValue;
   }
