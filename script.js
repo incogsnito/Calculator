@@ -14,7 +14,7 @@ input.addEventListener("click", (e) => {
       output.value = Function('return ' + output.value)();
       return;
     } else if (inputValue === "Ac"){
-      output.value = output.value.slice(0, 0);
+      output.value = "";
       return;
     }
 
