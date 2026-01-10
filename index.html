@@ -12,7 +12,7 @@
         <span class="previous"></span>
         <form action="">
           <label for="equations"></label>
-          <input placeholder="0" id="equations" type="numbers" />
+          <input placeholder="0" id="equations" oninput = "this.value = this.value.replace(/[^0-9+/-*.]/g, '')" />
         </form>
       </div>
 
