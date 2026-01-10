@@ -1,4 +1,3 @@
-const keys = document.querySelectorAll(".calculator__key");
 const input = document.querySelector(".input");
 const output = document.querySelector("#equations");
 
@@ -17,10 +16,8 @@ input.addEventListener("click", (e) => {
         output.value = "";
         alert("Can't divide by zero");
         return;
-
       }
-    } 
-    else if (inputValue === "Ac") {
+    } else if (inputValue === "Ac") {
       output.value = "";
       return;
     }
@@ -31,4 +28,13 @@ input.addEventListener("click", (e) => {
   addContent();
 });
 
+output.addEventListener("keydown", (e) => {
+  function keys() {
+    e.preventDefault();
+    if (e.key === "Enter") {
+      output.value = Function("return " + output.value)();
+    }  
+  }
 
+  keys();
+});
