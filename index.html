@@ -3,23 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Calculator</title>
   </head>
   <body>
     <main class="calculator">
       <div class="output">
-        <span class="equation">6000/2 + 3227*2</span>
-        <h2>=12,454</h2>
+        <span class="previous"></span>
+        <form action="">
+          <label for="equations"></label>
+          <input placeholder="0" id="equations" type="numbers" />
+        </form>
       </div>
 
-      <div class="intput">
+      <div class="input">
         <button class="calculator__key">e</button
         ><button class="calculator__key">pi</button
         ><button class="calculator__key">sin</button
         ><button class="calculator__key">deg</button
         ><button class="calculator__key">Ac</button
-        ><button class="calculator__key">delete</button
+        ><button id = "delete" class="calculator__key">delete</button
         ><button class="calculator__key">/</button
         ><button class="calculator__key">*</button
         ><button class="calculator__key">7</button
@@ -38,5 +41,7 @@
         ><button class="calculator__key">=</button>
       </div>
     </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
