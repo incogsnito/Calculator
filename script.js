@@ -10,13 +10,15 @@ input.addEventListener("click", (e) => {
     if (inputValue === "delete") {
       output.value = output.value.slice(0, -1);
       return;
-    }
-    if (inputValue === "="){
+    } else if (inputValue === "="){
       output.value = Function('return ' + output.value)();
+      return;
+    } else if (inputValue === "Ac"){
+      output.value = output.value.slice(0, 0);
       return;
     }
 
-    
+
 
     output.value += inputValue;
   }
