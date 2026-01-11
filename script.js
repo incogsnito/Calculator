@@ -29,10 +29,11 @@ input.addEventListener("click", (e) => {
 });
 
 output.addEventListener("keydown", (e) => {
-  function keys() {
-    e.preventDefault();
+function keys() {
+    if (!e.key === "Enter");
     if (e.key === "Enter") {
       output.value = Function("return " + output.value)();
+      e.preventDefault();
     }  
   }
 
