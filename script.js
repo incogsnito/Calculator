@@ -10,7 +10,8 @@ input.addEventListener("click", (e) => {
       output.value = output.value.slice(0, -1);
       return;
     } else if (inputValue === "=") {
-      output.value = Function("return " + output.value)();
+      output.value = Function("return " + output.value)()
+      return;
 
       if (output.value === "Infinity") {
         output.value = "";
